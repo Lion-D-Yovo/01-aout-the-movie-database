@@ -1,0 +1,28 @@
+<div class="jumbotron">
+     <div class="container">
+       <h1 class="display-3">Bienvenue sur mon site de création d'utilisateurs !</h1>
+       <p>Vous allez pouvoir choisir 3 méthodes différentes de création.</p>
+     </div>
+   </div>
+
+
+     Movies déjà créés :
+    
+<% @movies.each do |movie| %>
+    <p><%= movie.title %>, réalisé par <%= movie.director %>, sorti en <%= movie.release_year %></p>
+<% end %>
+
+     <hr>
+     <p>
+     <% Movie.all.each do |movies| %>
+       <p>
+       <div>
+         <p><strong><%= movies.usernamtitlee %></strong></p>
+         <p><%= movies.release_year %></p>
+         <p><%= movies.director %></p>
+         <hr>
+       </div>
+       </p>
+     <% end %>
+     </p>
+     </center>
