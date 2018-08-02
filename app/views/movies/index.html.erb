@@ -1,31 +1,35 @@
 <div class="jumbotron">
-     <div class="container">
-       <h1 class="display-3">Bienvenue sur mon site de création d'utilisateurs !</h1>
-       <p>Vous allez pouvoir choisir 3 méthodes différentes de création.</p>
-     </div>
-   </div>
+    <div class="container">
+        <h1 class="display-3">Bienvenue sur notre de catalogues de films !</h1>
+        <br><br><br>
+        <h2 class="display-3">Vous allez pouvoir consulter la liste des films.</h2>
+    </div>
+</div>
+<br><br><br><br>
 
-
-     Movies déjà créés :
-    
+    <h3 class="display-3" Movies déjà créés :</3>
+<hr>
+    <center>
+    <p>
 <% @movies.each do |movie| %>
     <p><%= movie.title %>, réalisé par <%= movie.director %>, sorti en <%= movie.release_year %></p>
 <% end %>
+</p>
+    </center>
 
 
-
-     <hr>
-     <center>
-     <p>
-     <% Movie.all.each do |movies| %>
-       <p>
+    <hr>
+    
+    <p>
+    <% Movie.all.each do |movies| %>
+    <p>
        <div>
-         <p><strong><%= movies.title %></strong></p>
-         <p><%= movies.release_year %></p>
-         <p><%= movies.director %></p>
-         <hr>
-       </div>
-       </p>
-     <% end %>
-     </p>
-     </center>
+            <p><strong><%= movies.title %></strong></p>
+            <p><%= movies.release_year %></p>
+            <p><%= movies.director %></p>
+            <hr>
+        </div>
+        </p>
+        <% end %>
+        </p>
+        </center>
