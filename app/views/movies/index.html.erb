@@ -12,12 +12,15 @@
     <p><%= movie.title %>, réalisé par <%= movie.director %>, sorti en <%= movie.release_year %></p>
 <% end %>
 
+
+
      <hr>
+     <center>
      <p>
      <% Movie.all.each do |movies| %>
        <p>
        <div>
-         <p><strong><%= movies.usernamtitlee %></strong></p>
+         <p><strong><%= movies.title %></strong></p>
          <p><%= movies.release_year %></p>
          <p><%= movies.director %></p>
          <hr>
